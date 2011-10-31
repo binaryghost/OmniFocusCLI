@@ -4,7 +4,19 @@ AUTHOR:	Don Southard aka. @binaryghost
 
 CHANGELOG:
 
-**[ 6/17/2011 11:04:04AM version 1.4 ]**
+
+**[ October 31, 2011 10:42:17 AM version 1.5 ]**
+
+- Fixed Growl support. Now it works with the MAS version of Growl and will hopefully gracefully fail if Growl is not running. That should alleviate all the issues I have recieved lately
+
+- Started implementing Due support. It is **NOT** finished but I wanted to push this out now because so many people where having problems with Growl.
+
+- I am also including my Alfred extension in the github repo. Many people have asked for me to just ship the extension all wrapped up and ready to go and I figure its a good idea since you can easily import extensions in to Alfred app now
+
+- Added "Agendas" to the existing "Agenda" context lookup just as another option, different people spell it differently.
+
+
+[ 6/17/2011 11:04:04AM version 1.4 ]
 
 -Fixed major bug in Context support for Non-MAS version of OF.
 Thanks to Thierry for taking the time to submit the bug report!
@@ -15,7 +27,7 @@ Thanks to Thierry for taking the time to submit the bug report!
 
 
 
-**[ 6/06/2011 02:14:11PM version 1.3 ]**
+[ 6/06/2011 02:14:11PM version 1.3 ]
 
 -Contexts are no longer case sensitive and it has sub-context support!
 
@@ -68,31 +80,10 @@ I know this is a big jump in version numbers but I basically rewrote atleast hal
 -Added "Noon"/"noon" support
 
 
-INSTALL:
-
+__INSTALL:__   
 Start by downloading the latest version of OmniFocusCLI from this link to its GitHub Repo: [OmniFocusCLI](https://github.com/binaryghost/OmniFocusCLI/zipball/master)
 
-Inside this zip folder is the OmniFocusCLI.sh script. Extract it to a location of your choice.
-
-Create a new Terminal / Shell shortcut in Alfred.
-
-**Mine looks like this:**
-
-**Title:**_ Add Task to OmniFocus_
-
-**Description:**_ ..._
-
-**Keyword:**_ task_
-
-**Command:**_ /Users/YOU/LOCATION_OF_SCRIPT/OmnifocusCLI.sh {query}_
-
-Do not check the boxes for Quotes or Spaces
-
-Click save.
-
-On the main Terminal / Shell Shortcuts screen, check the box for Silent but leave the box for Action blank.
-
-At this point, you should be able to test your OmniFocusCLI script from Alfred and it should work.
+Double click the Alfred Extension to add to Alfred or copy the script to your /usr/local/bin directory
 
 If it doesn't, it is probably because the script does not have permissions to execute on your computer.
 
