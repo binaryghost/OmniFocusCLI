@@ -1,12 +1,12 @@
 #!/bin/sh 
-#  OmniFocusCLI v.1.5
+#  OmniFocusCLI v.1.6
 #  Created by Donald Southard aka @binaryghost
-#  Last edited on October 31, 2011 10:42:17 AM CDT
+#  Last edited on November 12, 2012 05:03:17 PM CDT
 
 #Check for empty task
 usage ()
 {
-     echo "OmniFocusCLI v1.5"
+     echo "OmniFocusCLI v1.6"
      echo "	usage: OmniFocusCLI.sh [task with date and time info]"
      echo "	Create an OmniFocus task using Natural Language Processing"
 }
@@ -672,25 +672,8 @@ osascript <<EOS
 	end if
 	
  	end tell
-    
-    tell application "System Events"
-    	set isRunning to (count of (every process whose bundle identifier is "com.Growl.GrowlHelperApp")) > 0
-    end tell
-
-    if isRunning then
-        tell application id "com.Growl.GrowlHelperApp"
-            set the allNotificationsList to ¬
-              {"OmniFocusCLI"}
-             set the enabledNotificationsList to ¬
-              {"OmniFocusCLI"}
-             register as application "OmniFocusCLI" ¬
-               all notifications allNotificationsList ¬
-               default notifications enabledNotificationsList ¬
-               icon of application "OmniFocus"
-             notify with name "OmniFocusCLI" ¬
-               title "OmniFocus Inbox Task Created" ¬
-               description "Task: \"$task_name\"" ¬
-               application name "OmniFocusCLI" 
-        end tell
-    end if
 EOS
+
+if [[ $task_name ]]; then
+    echo "Inbox task created: $task_name"
+fi
