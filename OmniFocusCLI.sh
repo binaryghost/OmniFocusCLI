@@ -7,7 +7,7 @@
 usage ()
 {
      echo "OmniFocusCLI v1.6"
-     echo "	usage: OmniFocusCLI.sh [task with date and time info]"
+     echo "	usage: OmniFocusCLI.sh [NLP TASK]"
      echo "	Create an OmniFocus task using Natural Language Processing (NLP)"
 }
 
