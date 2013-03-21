@@ -8,7 +8,7 @@ usage ()
 {
      echo "OmniFocusCLI v1.6"
      echo "	usage: OmniFocusCLI.sh [task with date and time info]"
-     echo "	Create an OmniFocus task using Natural Language Processing"
+     echo "	Create an OmniFocus task using Natural Language Processing (NLP)"
 }
 
 if [ $# -lt 1 ]
