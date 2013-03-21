@@ -6,7 +6,7 @@
 #Check for empty task
 usage ()
 {
-     echo "OmniFocusCLI v1.6"
+     echo "OmniFocusCLI v1.7"
      echo "	usage: OmniFocusCLI.sh [task with date and time info]"
      echo "	Create an OmniFocus task using Natural Language Processing"
 }
